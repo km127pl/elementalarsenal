@@ -1,6 +1,5 @@
 package me.km127pl.elementalarsenal.items.custom;
 
-import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;

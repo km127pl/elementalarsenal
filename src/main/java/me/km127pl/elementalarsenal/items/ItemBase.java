@@ -116,17 +116,11 @@ public class ItemBase {
 	public void onRightClick(PlayerInteractEvent event) {
 	}
 
-	;
-
 	public void onLeftClick(PlayerInteractEvent event) {
 	}
 
-	;
-
 	public void onArrowHit(ProjectileHitEvent event, Player shooter) {
 	}
-
-	;
 
 	public void sendActionbar(Player player, Component message) {
 		player.sendActionBar(message);

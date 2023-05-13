@@ -70,7 +70,8 @@ public class AOTE extends ItemBase {
 		player.teleport(location);
 		player.spawnParticle(Particle.SPELL_MOB, player.getLocation(), 20, red, green, blue, 1);
 		event.setCancelled(true);
-	};
+	}
+
 	public Location getLocationInFront(Player player) {
 		Location location = player.getLocation();
 		Location _tempLocation = location.clone();

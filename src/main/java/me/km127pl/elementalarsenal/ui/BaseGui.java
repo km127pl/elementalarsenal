@@ -23,7 +23,7 @@ public class BaseGui implements Listener {
 		// set an item in the middle to a dirt block saying
 		// "this gui is not implemented yet"
 
-		 setItem(1, new Icon(Material.DIRT, 1, Component.text("This gui is not implemented yet")));
+		setItem(1, new Icon(Material.DIRT, 1, Component.text("This gui is not implemented yet")));
 	}
 
 	public void openGui(Player player) {

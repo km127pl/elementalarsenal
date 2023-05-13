@@ -8,5 +8,5 @@ public enum ItemType {
 	AXE,
 	WAND,
 	BLOCK,
-	BOW;
+	BOW
 }

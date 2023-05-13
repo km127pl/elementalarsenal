@@ -12,7 +12,8 @@ public class ItemManager {
 
 	/**
 	 * Registers an item
-	 * @param id the id of the item
+	 *
+	 * @param id   the id of the item
 	 * @param item the item to register
 	 * @return true if the item was registered, false otherwise
 	 */
@@ -24,6 +25,7 @@ public class ItemManager {
 
 	/**
 	 * Gets an id from an item
+	 *
 	 * @param item the item to get the id from
 	 * @return the id of the item, null if the item does not have an id
 	 */
@@ -41,6 +43,7 @@ public class ItemManager {
 
 	/**
 	 * Checks if the item has an id
+	 *
 	 * @param item the item to check
 	 * @return true if the item has an id, false otherwise
 	 */

@@ -14,39 +14,39 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ElementalArsenal extends JavaPlugin {
 
-    PluginManager pm;
+	PluginManager pm;
 
-    @Override
-    public void onEnable() {
-        pm = this.getServer().getPluginManager();
+	public static ElementalArsenal getPlugin() {
+		return ElementalArsenal.getPlugin(ElementalArsenal.class);
+	}
 
-        PaperCommandManager manager = new PaperCommandManager(this);
-        manager.registerCommand(new ItemCommand());
+	@Override
+	public void onEnable() {
+		pm = this.getServer().getPluginManager();
 
-        ItemManager.registerItem(AOTE.ID, new AOTE());
-        ItemManager.registerItem(AOTV.ID, new AOTV());
-        ItemManager.registerItem(ExplosiveBow.ID, new ExplosiveBow());
-        ItemManager.registerItem(InkWand.ID, new InkWand());
-        ItemManager.registerItem(VerdantWand.ID, new VerdantWand());
-        ItemManager.registerItem(RadianceWand.ID, new RadianceWand());
-        ItemManager.registerItem(RedstoneWand.ID, new RedstoneWand());
-        ItemManager.registerItem(DebugWand.ID, new DebugWand());
+		PaperCommandManager manager = new PaperCommandManager(this);
+		manager.registerCommand(new ItemCommand());
 
-        pm.registerEvents(new ItemAction(), this);
-        pm.registerEvents(new ItemDamage(), this);
-        pm.registerEvents(new ItemArrowHit(), this);
-        pm.registerEvents(new ItemBlock(), this);
-        pm.registerEvents(new ItemGui(), this);
+		ItemManager.registerItem(AOTE.ID, new AOTE());
+		ItemManager.registerItem(AOTV.ID, new AOTV());
+		ItemManager.registerItem(ExplosiveBow.ID, new ExplosiveBow());
+		ItemManager.registerItem(InkWand.ID, new InkWand());
+		ItemManager.registerItem(VerdantWand.ID, new VerdantWand());
+		ItemManager.registerItem(RadianceWand.ID, new RadianceWand());
+		ItemManager.registerItem(RedstoneWand.ID, new RedstoneWand());
+		ItemManager.registerItem(DebugWand.ID, new DebugWand());
 
-        manager.getCommandCompletions().registerAsyncCompletion("items", c -> ItemManager.items.keySet());
-    }
+		pm.registerEvents(new ItemAction(), this);
+		pm.registerEvents(new ItemDamage(), this);
+		pm.registerEvents(new ItemArrowHit(), this);
+		pm.registerEvents(new ItemBlock(), this);
+		pm.registerEvents(new ItemGui(), this);
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
+		manager.getCommandCompletions().registerAsyncCompletion("items", c -> ItemManager.items.keySet());
+	}
 
-    public static ElementalArsenal getPlugin() {
-        return ElementalArsenal.getPlugin(ElementalArsenal.class);
-    }
+	@Override
+	public void onDisable() {
+		// Plugin shutdown logic
+	}
 }

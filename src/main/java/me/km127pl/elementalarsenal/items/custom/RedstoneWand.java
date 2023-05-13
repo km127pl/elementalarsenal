@@ -11,12 +11,8 @@ import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
 import org.bukkit.block.Block;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
@@ -25,6 +21,7 @@ import java.util.List;
 public class RedstoneWand extends ItemBase {
 	public static final String ID = "REDSTONE_WAND";
 	public static ArrayList<Material> redstoneComponents = new ArrayList<>();
+
 	public RedstoneWand() {
 		super(Material.REDSTONE_TORCH, "Redstone Wand", ItemRarity.SPECIAL, ItemType.WAND, ID);
 
@@ -111,7 +108,7 @@ public class RedstoneWand extends ItemBase {
 
 			}
 			world.spawnParticle(Particle.REDSTONE, location, 1, 0, 0, 0, 0,
-					new Particle.DustOptions(Color.fromRGB(255, 0,0), 1), true);
+					new Particle.DustOptions(Color.fromRGB(255, 0, 0), 1), true);
 		}
 	}
 

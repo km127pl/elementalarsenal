@@ -6,14 +6,9 @@ import co.aikar.commands.bukkit.contexts.OnlinePlayer;
 import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemManager;
 import me.km127pl.elementalarsenal.ui.ItemGui;
-import net.kyori.adventure.text.Component;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 @CommandAlias("ea|elementalarsenal")
 public class ItemCommand extends BaseCommand {

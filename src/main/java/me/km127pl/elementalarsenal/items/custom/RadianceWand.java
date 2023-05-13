@@ -1,7 +1,6 @@
 package me.km127pl.elementalarsenal.items.custom;
 
 import com.google.common.collect.Lists;
-import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
@@ -57,14 +56,13 @@ public class RadianceWand extends ItemWand {
 				.append(Component.text(this.getAbilities().get(0).getName()).color(TextColor.color(255, 208, 11))).decoration(TextDecoration.ITALIC, false));
 	}
 
-	;
-
 	@Override
 	public void onLeftClick(PlayerInteractEvent event) {
 		shootDouse(event.getPlayer());
 		sendActionbar(event.getPlayer(), Component.text("Ability used - ").color(TextColor.color(255, 125, 0))
 				.append(Component.text(this.getAbilities().get(1).getName()).color(TextColor.color(135, 101, 9))).decoration(TextDecoration.ITALIC, false));
 	}
+
 	public void shootLuminous(Player player) {
 		Location location = player.getEyeLocation();
 		Vector direction = location.getDirection();

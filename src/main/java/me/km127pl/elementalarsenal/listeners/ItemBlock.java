@@ -3,12 +3,9 @@ package me.km127pl.elementalarsenal.listeners;
 import me.km127pl.elementalarsenal.commands.Messages;
 import me.km127pl.elementalarsenal.items.ItemManager;
 import net.kyori.adventure.text.Component;
-import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.inventory.PrepareAnvilEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class ItemBlock implements Listener {
 
