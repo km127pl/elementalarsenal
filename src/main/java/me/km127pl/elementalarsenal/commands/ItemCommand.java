@@ -19,14 +19,9 @@ public class ItemCommand extends BaseCommand {
 	@CommandCompletion("give")
 	@CommandPermission("elementalarsenal.admin")
 	public static void onMainCommand(Player player) {
-		// create a new gui with 6 rows and the title "Elemental Arsenal"
-		// filled with the item icons
-		// when an item is clicked, run the command /ea give <item> <player>
-
+		// create a new item gui and show it
 		ItemGui gui = new ItemGui();
 		gui.openGui(player);
-
-		player.sendMessage(Messages.NOT_IMPLEMENTED.getFormattedMessage());
 	}
 
 	@Subcommand("give")

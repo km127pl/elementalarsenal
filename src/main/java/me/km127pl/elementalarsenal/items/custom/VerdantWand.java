@@ -49,14 +49,13 @@ public class VerdantWand extends ItemWand {
 		return 0.0; // it's a wand, bruv
 	}
 
-	@Override
-	public void onRightClick(PlayerInteractEvent event) {
-		shoot(event.getPlayer());
-		sendActionbar(event.getPlayer(), Component.text("Ability used - ").color(TextColor.color(255, 125, 0))
-				.append(Component.text(this.getAbilities().get(0).getName()).color(TextColor.color(255, 208, 11))).decoration(TextDecoration.ITALIC, false));
+	public double getCooldown() {
+		return 1.5f;
 	}
 
-	public void shoot(Player player) {
+
+	@Override
+	public void shootProjectilePrimary(Player player) {
 		// Get the player's location and direction
 		Location location = player.getEyeLocation();
 		Vector direction = location.getDirection();

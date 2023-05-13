@@ -6,6 +6,7 @@ import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
+import me.km127pl.elementalarsenal.items.types.ItemWand;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -18,12 +19,12 @@ import org.bukkit.util.Vector;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RedstoneWand extends ItemBase {
+public class RedstoneWand extends ItemWand {
 	public static final String ID = "REDSTONE_WAND";
 	public static ArrayList<Material> redstoneComponents = new ArrayList<>();
 
 	public RedstoneWand() {
-		super(Material.REDSTONE_TORCH, "Redstone Wand", ItemRarity.SPECIAL, ItemType.WAND, ID);
+		super(Material.REDSTONE_TORCH, "Redstone Disruptor Wand", ItemRarity.SPECIAL, ItemType.WAND, ID);
 
 		redstoneComponents.add(Material.REDSTONE_WIRE);
 		redstoneComponents.add(Material.REPEATER);
@@ -36,6 +37,10 @@ public class RedstoneWand extends ItemBase {
 		redstoneComponents.add(Material.STICKY_PISTON);
 		redstoneComponents.add(Material.REDSTONE_TORCH);
 		redstoneComponents.add(Material.REDSTONE_LAMP);
+	}
+
+	public double getCooldown() {
+		return 1.5f;
 	}
 
 	@Override
@@ -52,13 +57,7 @@ public class RedstoneWand extends ItemBase {
 	}
 
 	@Override
-	public void onRightClick(PlayerInteractEvent event) {
-		shoot(event.getPlayer());
-		sendActionbar(event.getPlayer(), Component.text("Ability used - ").color(TextColor.color(255, 125, 0))
-				.append(Component.text(this.getAbilities().get(0).getName()).color(TextColor.color(255, 208, 11))).decoration(TextDecoration.ITALIC, false));
-	}
-
-	public void shoot(Player player) {
+	public void shootProjectilePrimary(Player player) {
 		Location location = player.getEyeLocation();
 		Vector direction = location.getDirection();
 		World world = location.getWorld();

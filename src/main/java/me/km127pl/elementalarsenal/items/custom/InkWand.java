@@ -15,6 +15,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -47,24 +48,17 @@ public class InkWand extends ItemWand {
 		return 7.0;
 	}
 
-	@Override
-	public void onRightClick(PlayerInteractEvent event) {
-		if (event.getPlayer().getCooldown(Material.WITHER_ROSE) > 0) {
-			event.setCancelled(true);
-
-			return;
-		}
-		shoot(event.getPlayer());
-		sendActionbar(event.getPlayer(), Component.text("Ability used - ").color(TextColor.color(255, 125, 0))
-				.append(Component.text(this.getAbilities().get(0).getName()).color(TextColor.color(255, 208, 11))).decoration(TextDecoration.ITALIC, false));
+	public double getCooldown() {
+		return 0.5f;
 	}
 
-	public void shoot(Player player) {
+
+	@Override
+	public void shootProjectilePrimary(Player player) {
 		Location location = player.getEyeLocation();
 		Vector direction = location.getDirection();
 		World world = location.getWorld();
 		int hits = 0;
-		player.setCooldown(Material.WITHER_ROSE, 15);
 
 		for (int i = 0; i < 12; i++) {
 			location.add(direction);
