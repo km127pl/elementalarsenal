@@ -13,9 +13,10 @@ public class Icon {
 
 	/**
 	 * Creates an Icon
+	 *
 	 * @param material the material of the icon
-	 * @param amount the amount of the icon
-	 * @param name the name of the icon
+	 * @param amount   the amount of the icon
+	 * @param name     the name of the icon
 	 */
 	public Icon(Material material, int amount, Component name) {
 		this.material = material;
@@ -25,6 +26,7 @@ public class Icon {
 
 	/**
 	 * Gets the ItemStack of the icon
+	 *
 	 * @return the ItemStack of the icon
 	 */
 	public ItemStack getItemStack() {
@@ -38,6 +40,7 @@ public class Icon {
 
 	/**
 	 * Gets the material of the icon
+	 *
 	 * @return the material of the icon
 	 */
 	public Material getMaterial() {

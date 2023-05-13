@@ -42,17 +42,25 @@ public class ItemWand extends ItemBase {
 
 	/**
 	 * Shoots a primary projectile from the player
+	 *
 	 * @param player The player to shoot the projectile from
 	 * @implNote This method is called when the player right clicks with the item<br>Use this instead of binding to {@link ItemBase#onRightClick(PlayerInteractEvent)}.
 	 * @see ItemBase#onRightClick(PlayerInteractEvent)
 	 */
-	public void shootProjectilePrimary(Player player) {};
+	public void shootProjectilePrimary(Player player) {
+	}
+
+	;
 
 	/**
 	 * Shoots a secondary projectile from the player
+	 *
 	 * @param player The player to shoot the projectile from
 	 * @implNote This method is called when the player right clicks with the item<br>Use this instead of binding to {@link ItemBase#onRightClick(PlayerInteractEvent)}.
 	 * @see ItemBase#onRightClick(PlayerInteractEvent)
 	 */
-	public void shootProjectileSecondary(Player player) {};
+	public void shootProjectileSecondary(Player player) {
+	}
+
+	;
 }

@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class InfernoWand extends ItemWand {
 
 	public static final String ID = "INFERNO_WAND";
+
 	public InfernoWand() {
 		super(Material.BLAZE_ROD, "Inferno Wand", ItemRarity.RARE, ItemType.WAND, ID);
 	}

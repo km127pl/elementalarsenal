@@ -31,6 +31,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Opens the gui for the player
+	 *
 	 * @param player the player to open the gui for
 	 */
 	public void openGui(Player player) {
@@ -39,6 +40,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Closes the gui for the player
+	 *
 	 * @param player the player to close the gui for
 	 */
 	public void closeGui(Player player) {
@@ -47,6 +49,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Sets an item in the gui
+	 *
 	 * @param slot the slot to set the item in
 	 * @param item the item to set
 	 */
@@ -56,6 +59,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Sets an item in the gui
+	 *
 	 * @param slot the slot to set the item in
 	 * @param icon the icon to set
 	 */
@@ -65,6 +69,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Adds an item to the gui
+	 *
 	 * @param item the item to add
 	 * @implNote This method adds an item to the gui, and automatically increments the lastSlot variable.
 	 */
@@ -79,6 +84,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Fills the gui with an item
+	 *
 	 * @param item the item to fill the gui with
 	 */
 	public void fillWith(ItemStack item) {
@@ -89,6 +95,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Fills the gui with an icon
+	 *
 	 * @param icon the icon to fill the gui with
 	 */
 	public void fillWith(Icon icon) {
@@ -97,6 +104,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Fills the border of the gui with an item
+	 *
 	 * @param item the item to fill the border with
 	 */
 	public void fillBorder(ItemStack item) {
@@ -109,6 +117,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * Fills the border of the gui with an icon
+	 *
 	 * @param icon the icon to fill the border with
 	 */
 	public void fillBorder(Icon icon) {
@@ -130,6 +139,7 @@ public class BaseGui implements Listener {
 
 	/**
 	 * On gui click event handler
+	 *
 	 * @param event the event
 	 * @implNote This method is called when the gui is clicked.
 	 * @apiNote This method should be overridden.

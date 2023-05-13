@@ -1,7 +1,6 @@
-package me.km127pl.elementalarsenal.items.custom.boots;
+package me.km127pl.elementalarsenal.items.custom.armor;
 
 import com.destroystokyo.paper.event.player.PlayerJumpEvent;
-import me.km127pl.elementalarsenal.items.ItemManager;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
@@ -17,13 +16,14 @@ import java.util.ArrayList;
 
 public class RocketBoots extends ArmorBoots {
 	public static final String ID = "ROCKET_BOOTS";
+
 	public RocketBoots() {
 		super(Material.LEATHER_BOOTS, "Rocket Boots", ItemRarity.RARE, ID);
 	}
 
 	@Override
 	public ArrayList<ItemAbility> getAbilities() {
-ArrayList<ItemAbility> abilities = new ArrayList<>();
+		ArrayList<ItemAbility> abilities = new ArrayList<>();
 		abilities.add(new ItemAbility(
 				AbilityType.SHIFT_JUMP,
 				"Boost Jump",

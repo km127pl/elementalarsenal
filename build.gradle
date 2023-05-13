@@ -28,7 +28,12 @@ repositories {
 compileJava {
     options.compilerArgs += ["-parameters", "-Xlint:unchecked", "-Xlint:deprecation"]
     options.fork = true
-    options.forkOptions.executable = 'C:\\Users\\Jakub\\.jdks\\temurin-17.0.7\\bin\\javac.exe'
+    // if we're on windows
+    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+        options.forkOptions.executable = System.getenv("JAVA_HOME") + "/javac.exe"
+    } else {
+        options.forkOptions.executable = "/usr/bin/javac"
+    }
 }
 
 dependencies {
@@ -39,24 +44,10 @@ dependencies {
 shadowJar {
     relocate 'co.aikar.commands', 'me.km127pl.elementalarsenal.acf'
     relocate 'co.aikar.locales', 'me.km127pl.elementalarsenal.locales'
-    destinationDirectory.set(file("C:\\Users\\Jakub\\Desktop\\test_server\\plugins"))
+    // change this to your server's plugin folder
+    destinationDirectory.set(file("C:/Users/Jakub/Desktop/test_server/plugins"))
+    archiveFileName = "${project.name}-${project.version}-shaded.jar"
 }
-
-//def targetJavaVersion = 17
-//java {
-//    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-//    sourceCompatibility = javaVersion
-//    targetCompatibility = javaVersion
-//    if (JavaVersion.current() < javaVersion) {
-//        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-//    }
-//}
-
-//tasks.withType(JavaCompile).configureEach {
-//    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-//        options.release = targetJavaVersion
-//    }
-//}
 
 processResources {
     def props = [version: version]

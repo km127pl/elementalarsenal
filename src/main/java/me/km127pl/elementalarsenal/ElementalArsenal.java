@@ -3,7 +3,7 @@ package me.km127pl.elementalarsenal;
 import co.aikar.commands.PaperCommandManager;
 import me.km127pl.elementalarsenal.commands.ItemCommand;
 import me.km127pl.elementalarsenal.items.ItemManager;
-import me.km127pl.elementalarsenal.items.custom.boots.RocketBoots;
+import me.km127pl.elementalarsenal.items.custom.armor.RocketBoots;
 import me.km127pl.elementalarsenal.items.custom.bows.ExplosiveBow;
 import me.km127pl.elementalarsenal.items.custom.swords.AOTE;
 import me.km127pl.elementalarsenal.items.custom.swords.AOTV;
@@ -17,13 +17,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ElementalArsenal extends JavaPlugin {
 
-	PluginManager pm;
 	public static NamespacedKey key = new NamespacedKey("itemsmanager", "item_id");
+	public static FileConfiguration configuration;
+	PluginManager pm;
 
 	public static ElementalArsenal getPlugin() {
 		return ElementalArsenal.getPlugin(ElementalArsenal.class);
 	}
-	public static FileConfiguration configuration;
 
 	@Override
 	public void onEnable() {
