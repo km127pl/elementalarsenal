@@ -10,6 +10,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Objects;
+
 @CommandAlias("ea|elementalarsenal")
 public class ItemCommand extends BaseCommand {
 
@@ -53,6 +55,6 @@ public class ItemCommand extends BaseCommand {
 		ItemMeta meta = holding.getItemMeta();
 		if (meta == null) return;
 
-		player.sendMessage(ItemManager.getIdFrom(holding));
+		player.sendMessage(Objects.requireNonNull(ItemManager.getIdFrom(holding)));
 	}
 }

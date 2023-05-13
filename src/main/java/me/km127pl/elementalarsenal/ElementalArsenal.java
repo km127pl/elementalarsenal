@@ -9,12 +9,14 @@ import me.km127pl.elementalarsenal.listeners.ItemArrowHit;
 import me.km127pl.elementalarsenal.listeners.ItemBlock;
 import me.km127pl.elementalarsenal.listeners.ItemDamage;
 import me.km127pl.elementalarsenal.ui.ItemGui;
+import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ElementalArsenal extends JavaPlugin {
 
 	PluginManager pm;
+	public static NamespacedKey key = new NamespacedKey("itemsmanager", "item_id");
 
 	public static ElementalArsenal getPlugin() {
 		return ElementalArsenal.getPlugin(ElementalArsenal.class);

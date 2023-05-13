@@ -1,5 +1,6 @@
 package me.km127pl.elementalarsenal.items;
 
+import me.km127pl.elementalarsenal.ElementalArsenal;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -54,7 +55,7 @@ public class ItemBase {
 		meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		meta.addItemFlags(ItemFlag.HIDE_ITEM_SPECIFICS);
-		meta.getPersistentDataContainer().set(new NamespacedKey("hitem", "item_id"), PersistentDataType.STRING, this.id);
+		meta.getPersistentDataContainer().set(ElementalArsenal.key, PersistentDataType.STRING, this.id);
 //		meta.lore(lore);
 
 		if (this.glint()) {

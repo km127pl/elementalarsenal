@@ -1,5 +1,6 @@
 package me.km127pl.elementalarsenal.items;
 
+import me.km127pl.elementalarsenal.ElementalArsenal;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -15,12 +16,10 @@ public class ItemManager {
 	 *
 	 * @param id   the id of the item
 	 * @param item the item to register
-	 * @return true if the item was registered, false otherwise
 	 */
-	public static boolean registerItem(String id, ItemBase item) {
-		if (items.containsKey(id)) return false;
+	public static void registerItem(String id, ItemBase item) {
+		if (items.containsKey(id)) return;
 		items.put(id, item);
-		return true;
 	}
 
 	/**
@@ -32,9 +31,8 @@ public class ItemManager {
 	public static String getIdFrom(ItemStack item) {
 		if (item.getItemMeta() == null) return null;
 		PersistentDataContainer container = item.getItemMeta().getPersistentDataContainer();
-		NamespacedKey key = new NamespacedKey("hitem", "item_id");
 
-		return container.get(key, PersistentDataType.STRING);
+		return container.get(ElementalArsenal.key, PersistentDataType.STRING);
 	}
 
 	public static void unregisterAll() {

@@ -21,7 +21,7 @@ public class ItemGui extends BaseGui {
 		lastSlot = 10;
 
 		// add a search icon
-		setItem(49, searchIcon);
+//		setItem(49, searchIcon); // not implemented yet
 
 		init();
 	}
