@@ -11,16 +11,27 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
+import java.util.Objects;
+
 public class DamageIndicator {
 	public LivingEntity entity;
 	public ArmorStand indicator;
 	public int damage;
 
+	/**
+	 * Creates a new damage indicator
+	 * @param entity the entity to show the indicator for
+	 * @param damage the amount of damage to show
+	 */
 	public DamageIndicator(LivingEntity entity, int damage) {
 		this.entity = entity;
 		this.damage = damage;
 	}
 
+	/**
+	 * Shows the damage indicator at the given location
+	 * @param loc the location to show the indicator at
+	 */
 	public void show(Location loc) {
 		// add a random off set the location
 		loc.add(Math.random() * 0.7, 0, Math.random() * 0.7);
@@ -34,7 +45,8 @@ public class DamageIndicator {
 		Component text = Component.text(String.valueOf(damage));
 
 		// colour the text based on the damage % of the entity max health
-		double percent = (double) damage / entity.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
+		if (entity.getAttribute(Attribute.GENERIC_MAX_HEALTH) == null) return;
+		double percent = (double) damage / Objects.requireNonNull(entity.getAttribute(Attribute.GENERIC_MAX_HEALTH)).getValue();
 
 		if (percent > 0.75) {
 			text = text.color(TextColor.color(0xFF0000));
@@ -48,11 +60,9 @@ public class DamageIndicator {
 
 		indicator.customName(text);
 
-
 		this.indicator = indicator;
 
 		// remove the indicator after 1 second
 		Bukkit.getScheduler().scheduleSyncDelayedTask(ElementalArsenal.getPlugin(), indicator::remove, 20);
-
 	}
 }

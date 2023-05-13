@@ -20,17 +20,16 @@ public class ItemGui extends BaseGui {
 		fillBorder(new Icon(Material.GRAY_STAINED_GLASS_PANE, 1, Component.text(" ")));
 		lastSlot = 10;
 
-		init();
 		// add a search icon
 		setItem(49, searchIcon);
+
+		init();
 	}
 
 	@Override
 	public void init() {
-		// add all the items from itemmanager
-		ItemManager.items.forEach((name, item) -> {
-			addItem(item.getItem());
-		});
+		// add all the items from item manager
+		ItemManager.items.forEach((name, item) -> addItem(item.getItem()));
 	}
 
 	@EventHandler

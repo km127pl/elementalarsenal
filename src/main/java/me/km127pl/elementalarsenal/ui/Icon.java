@@ -10,14 +10,23 @@ public class Icon {
 	private final Material material;
 	private final int amount;
 	private final Component name;
-	private boolean isFiller = false;
 
+	/**
+	 * Creates an Icon
+	 * @param material the material of the icon
+	 * @param amount the amount of the icon
+	 * @param name the name of the icon
+	 */
 	public Icon(Material material, int amount, Component name) {
 		this.material = material;
 		this.amount = amount;
 		this.name = name;
 	}
 
+	/**
+	 * Gets the ItemStack of the icon
+	 * @return the ItemStack of the icon
+	 */
 	public ItemStack getItemStack() {
 		ItemStack item = new ItemStack(material, amount);
 		ItemMeta meta = item.getItemMeta();
@@ -27,15 +36,10 @@ public class Icon {
 		return item;
 	}
 
-	public Icon filler(boolean filler) {
-		isFiller = filler;
-		return this;
-	}
-
-	public boolean isFiller() {
-		return isFiller;
-	}
-
+	/**
+	 * Gets the material of the icon
+	 * @return the material of the icon
+	 */
 	public Material getMaterial() {
 		return material;
 	}
