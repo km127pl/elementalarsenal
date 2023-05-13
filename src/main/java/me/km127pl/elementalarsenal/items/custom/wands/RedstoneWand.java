@@ -1,19 +1,14 @@
 package me.km127pl.elementalarsenal.items.custom.wands;
 
 import me.km127pl.elementalarsenal.ElementalArsenal;
-import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
 import me.km127pl.elementalarsenal.items.types.ItemWand;
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.format.TextColor;
-import net.kyori.adventure.text.format.TextDecoration;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;

@@ -30,6 +30,9 @@ public class ItemGui extends BaseGui {
 	public void init() {
 		// add all the items from item manager
 		ItemManager.items.forEach((name, item) -> addItem(item.getItem()));
+
+		// add all armor pieces
+		ItemManager.armor.forEach((name, item) -> addItem(item.getItem()));
 	}
 
 	@EventHandler

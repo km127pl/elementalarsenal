@@ -3,14 +3,12 @@ package me.km127pl.elementalarsenal;
 import co.aikar.commands.PaperCommandManager;
 import me.km127pl.elementalarsenal.commands.ItemCommand;
 import me.km127pl.elementalarsenal.items.ItemManager;
+import me.km127pl.elementalarsenal.items.custom.boots.RocketBoots;
 import me.km127pl.elementalarsenal.items.custom.bows.ExplosiveBow;
 import me.km127pl.elementalarsenal.items.custom.swords.AOTE;
 import me.km127pl.elementalarsenal.items.custom.swords.AOTV;
 import me.km127pl.elementalarsenal.items.custom.wands.*;
-import me.km127pl.elementalarsenal.listeners.ItemAction;
-import me.km127pl.elementalarsenal.listeners.ItemArrowHit;
-import me.km127pl.elementalarsenal.listeners.ItemBlock;
-import me.km127pl.elementalarsenal.listeners.ItemDamage;
+import me.km127pl.elementalarsenal.listeners.*;
 import me.km127pl.elementalarsenal.ui.ItemGui;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -46,11 +44,14 @@ public final class ElementalArsenal extends JavaPlugin {
 		ItemManager.registerItem(DebugWand.ID, new DebugWand());
 		ItemManager.registerItem(InfernoWand.ID, new InfernoWand());
 
+		ItemManager.registerItem(RocketBoots.ID, new RocketBoots());
+
 		pm.registerEvents(new ItemAction(), this);
 		pm.registerEvents(new ItemDamage(), this);
 		pm.registerEvents(new ItemArrowHit(), this);
 		pm.registerEvents(new ItemBlock(), this);
 		pm.registerEvents(new ItemGui(), this);
+		pm.registerEvents(new ArmorEvents(), this);
 
 		manager.getCommandCompletions().registerAsyncCompletion("items", c -> ItemManager.items.keySet());
 	}

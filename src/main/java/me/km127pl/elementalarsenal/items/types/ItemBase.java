@@ -1,6 +1,8 @@
-package me.km127pl.elementalarsenal.items;
+package me.km127pl.elementalarsenal.items.types;
 
 import me.km127pl.elementalarsenal.ElementalArsenal;
+import me.km127pl.elementalarsenal.items.ItemRarity;
+import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;

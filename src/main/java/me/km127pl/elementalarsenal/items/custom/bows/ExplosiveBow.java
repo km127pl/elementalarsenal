@@ -1,6 +1,6 @@
 package me.km127pl.elementalarsenal.items.custom.bows;
 
-import me.km127pl.elementalarsenal.items.ItemBase;
+import me.km127pl.elementalarsenal.items.types.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;

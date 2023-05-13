@@ -1,6 +1,5 @@
 package me.km127pl.elementalarsenal.items.types;
 
-import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import net.kyori.adventure.text.Component;

@@ -8,5 +8,10 @@ public enum ItemType {
 	AXE,
 	WAND,
 	BLOCK,
-	BOW
+	BOW,
+	BOOTS,
+	LEGGINGS,
+	CHESTPLATE,
+	HELMET,
+	OTHER;
 }
