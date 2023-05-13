@@ -20,6 +20,7 @@ public class DamageIndicator {
 
 	/**
 	 * Creates a new damage indicator
+	 *
 	 * @param entity the entity to show the indicator for
 	 * @param damage the amount of damage to show
 	 */
@@ -30,6 +31,7 @@ public class DamageIndicator {
 
 	/**
 	 * Shows the damage indicator at the given location
+	 *
 	 * @param loc the location to show the indicator at
 	 */
 	public void show(Location loc) {

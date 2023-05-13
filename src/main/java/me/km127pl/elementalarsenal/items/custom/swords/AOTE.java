@@ -1,10 +1,10 @@
 package me.km127pl.elementalarsenal.items.custom.swords;
 
-import me.km127pl.elementalarsenal.items.types.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
+import me.km127pl.elementalarsenal.items.types.ItemBase;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;

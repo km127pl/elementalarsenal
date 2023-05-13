@@ -9,7 +9,8 @@ public class ArmorEvents implements Listener {
 	@EventHandler
 	public void onPlayerJumpEvent(PlayerJumpEvent event) {
 		// this is a really intensive event, so we should check if the player is wearing any armor first
-		if (event.getPlayer().getInventory().getBoots() == null || event.getPlayer().getInventory().getBoots().getItemMeta() == null) return;
+		if (event.getPlayer().getInventory().getBoots() == null || event.getPlayer().getInventory().getBoots().getItemMeta() == null)
+			return;
 		String id = ItemManager.getIdFrom(event.getPlayer().getInventory().getBoots());
 		if (id == null) return;
 		if (!ItemManager.armor.containsKey(id)) return;

@@ -17,13 +17,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ElementalArsenal extends JavaPlugin {
 
-	PluginManager pm;
 	public static NamespacedKey key = new NamespacedKey("itemsmanager", "item_id");
+	public static FileConfiguration configuration;
+	PluginManager pm;
 
 	public static ElementalArsenal getPlugin() {
 		return ElementalArsenal.getPlugin(ElementalArsenal.class);
 	}
-	public static FileConfiguration configuration;
 
 	@Override
 	public void onEnable() {

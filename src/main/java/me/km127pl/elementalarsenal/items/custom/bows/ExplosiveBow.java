@@ -1,10 +1,10 @@
 package me.km127pl.elementalarsenal.items.custom.bows;
 
-import me.km127pl.elementalarsenal.items.types.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.ItemType;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
+import me.km127pl.elementalarsenal.items.types.ItemBase;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

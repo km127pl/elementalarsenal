@@ -33,21 +33,27 @@ public class ArmorBase {
 
 	/**
 	 * Called when the player shift jumps
+	 *
 	 * @param event The event that is called when the player shift jumps
-	 * @see PlayerJumpEvent
 	 * @implNote This method is called when the player shift jumps
 	 * @apiNote This method should be overridden
+	 * @see PlayerJumpEvent
 	 */
-	public void onShiftJump(PlayerJumpEvent event) {}
+	public void onShiftJump(PlayerJumpEvent event) {
+	}
 
 	/**
 	 * Called when the player jumps
+	 *
 	 * @param event The event that is called when the player jumps
-	 * @see PlayerJumpEvent
 	 * @implNote This method is called when the player jumps
 	 * @apiNote This method should be overridden
+	 * @see PlayerJumpEvent
 	 */
-	public void onJump(PlayerJumpEvent event) {};
+	public void onJump(PlayerJumpEvent event) {
+	}
+
+	;
 
 	public Material getMaterial() {
 		return material;

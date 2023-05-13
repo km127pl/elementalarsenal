@@ -2,8 +2,8 @@ package me.km127pl.elementalarsenal.listeners;
 
 import com.google.common.collect.Multimap;
 import me.km127pl.elementalarsenal.ElementalArsenal;
-import me.km127pl.elementalarsenal.items.types.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemManager;
+import me.km127pl.elementalarsenal.items.types.ItemBase;
 import me.km127pl.elementalarsenal.ui.DamageIndicator;
 import org.bukkit.Material;
 import org.bukkit.Particle;
