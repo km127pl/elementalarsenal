@@ -35,7 +35,7 @@ settings:
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 **Tip:** You should use the [IntelliJ IDEA](https://www.jetbrains.com/idea/) IDE to develop this plugin.
-Otherwise you will have to manually add the [Spigot](https://hub.spigotmc.org/nexus/content/repositories/snapshots/) repository to your project.
+Otherwise you will have to manually add the [Paper](https://github.com/PaperMC/Paper) repository to your project.
 
 Once you setup the project, edit `gradle.properties` and change the `output_directory` to your dev server's plugin folder.
 
