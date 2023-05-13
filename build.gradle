@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'me.km127pl'
-version = '0.1-ALPHA'
+version = '0.1.1-ALPHA'
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
