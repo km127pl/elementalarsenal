@@ -1,7 +1,6 @@
-package me.km127pl.elementalarsenal.items.custom.boots;
+package me.km127pl.elementalarsenal.items.custom.armor;
 
 import com.destroystokyo.paper.event.player.PlayerJumpEvent;
-import me.km127pl.elementalarsenal.items.ItemManager;
 import me.km127pl.elementalarsenal.items.ItemRarity;
 import me.km127pl.elementalarsenal.items.abilities.AbilityType;
 import me.km127pl.elementalarsenal.items.abilities.ItemAbility;
