@@ -16,7 +16,7 @@ import java.util.Objects;
 public class ItemCommand extends BaseCommand {
 
 	@Default
-	@CommandCompletion("give|debug")
+	@CommandCompletion("give")
 	@CommandPermission("elementalarsenal.admin")
 	public static void onMainCommand(Player player) {
 		// create a new gui with 6 rows and the title "Elemental Arsenal"
@@ -46,15 +46,6 @@ public class ItemCommand extends BaseCommand {
 		ItemBase item = ItemManager.items.get(itemName);
 
 		player.getInventory().addItem(item.getItem());
-		player.sendMessage(Messages.ITEM_GIVEN.getFormattedMessage(String.valueOf(item.getItem().getItemMeta().displayName())));
-	}
-
-	@Subcommand("debug")
-	public static void onDebug(Player player) {
-		ItemStack holding = player.getActiveItem();
-		ItemMeta meta = holding.getItemMeta();
-		if (meta == null) return;
-
-		player.sendMessage(Objects.requireNonNull(ItemManager.getIdFrom(holding)));
+		player.sendMessage(Messages.ITEM_GIVEN.getFormattedMessage(item.getName()));
 	}
 }
