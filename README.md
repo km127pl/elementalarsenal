@@ -1,7 +1,9 @@
 ## Elemental Arsenal
+
 Elemental Arsenal is Minecraft plugin that allows you to create custom items.
 
 ### Features
+
 * Create custom items, armor pieces *duh*
 * Add abilities to items
 * Add custom damage to items
@@ -22,8 +24,8 @@ Elemental Arsenal is Minecraft plugin that allows you to create custom items.
 | elementalarsenal.admin | Allows access to all commands                                                          |
 | elementalarsenal.give  | Allows access to the `/ea give` command                                                |
 
-
 ### Item Configuration
+
 ```yaml
 # Path: plugins/ElementalArsenal/config.yml
 settings:
@@ -32,12 +34,15 @@ settings:
 ```
 
 ### Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 **Tip:** You should use the [IntelliJ IDEA](https://www.jetbrains.com/idea/) IDE to develop this plugin.
 Otherwise you will have to manually add the [Paper](https://github.com/PaperMC/Paper) repository to your project.
 
-Once you setup the project, edit `gradle.properties` and change the `output_directory` to your dev server's plugin folder.
+Once you setup the project, edit `build.gradle` and change the `destinationDirectory` in `shadowJar` to your dev server's plugin
+folder.
 
 ### License
+
 This project is licensed under the AGPL-3.0 license - see the [LICENSE](LICENSE) file for details
