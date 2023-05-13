@@ -3,13 +3,17 @@ package me.km127pl.elementalarsenal;
 import co.aikar.commands.PaperCommandManager;
 import me.km127pl.elementalarsenal.commands.ItemCommand;
 import me.km127pl.elementalarsenal.items.ItemManager;
-import me.km127pl.elementalarsenal.items.custom.*;
+import me.km127pl.elementalarsenal.items.custom.bows.ExplosiveBow;
+import me.km127pl.elementalarsenal.items.custom.swords.AOTE;
+import me.km127pl.elementalarsenal.items.custom.swords.AOTV;
+import me.km127pl.elementalarsenal.items.custom.wands.*;
 import me.km127pl.elementalarsenal.listeners.ItemAction;
 import me.km127pl.elementalarsenal.listeners.ItemArrowHit;
 import me.km127pl.elementalarsenal.listeners.ItemBlock;
 import me.km127pl.elementalarsenal.listeners.ItemDamage;
 import me.km127pl.elementalarsenal.ui.ItemGui;
 import org.bukkit.NamespacedKey;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,10 +25,13 @@ public final class ElementalArsenal extends JavaPlugin {
 	public static ElementalArsenal getPlugin() {
 		return ElementalArsenal.getPlugin(ElementalArsenal.class);
 	}
+	public static FileConfiguration configuration;
 
 	@Override
 	public void onEnable() {
 		pm = this.getServer().getPluginManager();
+		this.saveDefaultConfig();
+		configuration = this.getConfig();
 
 		PaperCommandManager manager = new PaperCommandManager(this);
 		manager.registerCommand(new ItemCommand());
@@ -37,6 +44,7 @@ public final class ElementalArsenal extends JavaPlugin {
 		ItemManager.registerItem(RadianceWand.ID, new RadianceWand());
 		ItemManager.registerItem(RedstoneWand.ID, new RedstoneWand());
 		ItemManager.registerItem(DebugWand.ID, new DebugWand());
+		ItemManager.registerItem(InfernoWand.ID, new InfernoWand());
 
 		pm.registerEvents(new ItemAction(), this);
 		pm.registerEvents(new ItemDamage(), this);

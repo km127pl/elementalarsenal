@@ -1,4 +1,4 @@
-package me.km127pl.elementalarsenal.items.custom;
+package me.km127pl.elementalarsenal.items.custom.wands;
 
 import com.google.common.collect.Lists;
 import me.km127pl.elementalarsenal.items.ItemRarity;

@@ -1,4 +1,4 @@
-package me.km127pl.elementalarsenal.items.custom;
+package me.km127pl.elementalarsenal.items.custom.bows;
 
 import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemRarity;

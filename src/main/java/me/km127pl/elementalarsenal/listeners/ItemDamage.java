@@ -1,6 +1,7 @@
 package me.km127pl.elementalarsenal.listeners;
 
 import com.google.common.collect.Multimap;
+import me.km127pl.elementalarsenal.ElementalArsenal;
 import me.km127pl.elementalarsenal.items.ItemBase;
 import me.km127pl.elementalarsenal.items.ItemManager;
 import me.km127pl.elementalarsenal.ui.DamageIndicator;
@@ -52,9 +53,13 @@ public class ItemDamage implements Listener {
 
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void postDamageHandler(EntityDamageEvent event) {
-		DamageIndicator indicator = new DamageIndicator((LivingEntity) event.getEntity(), (int) event.getDamage());
-		indicator.show(event.getEntity().getLocation());
-		// create 'blood' particles
-		event.getEntity().getWorld().spawnParticle(Particle.BLOCK_CRACK, event.getEntity().getLocation(), 10, 0.5, 0.5, 0.5, Material.REDSTONE_BLOCK.createBlockData());
+		if (ElementalArsenal.configuration.getBoolean("settings.damage-indicators")) {
+			DamageIndicator indicator = new DamageIndicator((LivingEntity) event.getEntity(), (int) event.getDamage());
+			indicator.show(event.getEntity().getLocation());
+		}
+		if (ElementalArsenal.configuration.getBoolean("settings.blood-particles")) {
+			// create 'blood' particles
+			event.getEntity().getWorld().spawnParticle(Particle.BLOCK_CRACK, event.getEntity().getLocation(), 10, 0.5, 0.5, 0.5, Material.REDSTONE_BLOCK.createBlockData());
+		}
 	}
 }

@@ -1,7 +1,9 @@
-name: 'elementalarsenal'
+name: 'ElementalArsenal'
 version: '${version}'
 main: me.km127pl.elementalarsenal.ElementalArsenal
 api-version: 1.19
 authors: [ km127pl ]
 description: an items plugin for block game
 website: km127pl.us
+database: false
+prefix: 'ElementalArsenal'
