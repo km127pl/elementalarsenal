@@ -49,6 +49,7 @@ public class VerdantWand extends ItemWand {
 		return 0.0; // it's a wand, bruv
 	}
 
+	@Override
 	public double getCooldown() {
 		return 1.5f;
 	}

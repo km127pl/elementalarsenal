@@ -39,6 +39,7 @@ public class RedstoneWand extends ItemWand {
 		redstoneComponents.add(Material.REDSTONE_LAMP);
 	}
 
+	@Override
 	public double getCooldown() {
 		return 1.5f;
 	}

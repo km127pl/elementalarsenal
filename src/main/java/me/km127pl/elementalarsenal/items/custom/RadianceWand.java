@@ -49,6 +49,7 @@ public class RadianceWand extends ItemWand {
 		return 0.0; // it's a wand, bruv
 	}
 
+	@Override
 	public double getCooldown() {
 		return 0.5f;
 	}

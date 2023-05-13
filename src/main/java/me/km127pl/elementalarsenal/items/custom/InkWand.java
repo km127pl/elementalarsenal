@@ -48,6 +48,7 @@ public class InkWand extends ItemWand {
 		return 7.0;
 	}
 
+	@Override
 	public double getCooldown() {
 		return 0.5f;
 	}
