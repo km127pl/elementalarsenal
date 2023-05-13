@@ -9,12 +9,11 @@ import me.km127pl.elementalarsenal.ui.ItemGui;
 import org.bukkit.entity.Player;
 
 @CommandAlias("ea|elementalarsenal")
-@CommandPermission("elementalarsenal.admin|elementalarsenal.*")
 public class ItemCommand extends BaseCommand {
 
 	@Default
 	@CommandCompletion("give")
-	@CommandPermission("elementalarsenal.give")
+	@CommandPermission("elementalarsenal.admin")
 	public static void onMainCommand(Player player) {
 		// create a new item gui and show it
 		ItemGui gui = new ItemGui();
