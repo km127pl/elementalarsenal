@@ -23,6 +23,9 @@ repositories {
     maven {
         url = "https://hub.spigotmc.org/nexus/content/groups/public/"
     }
+    maven {
+        url("https://repo.lucko.me/")
+    }
 }
 
 compileJava {
@@ -39,11 +42,13 @@ compileJava {
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT"
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
+    implementation 'com.github.stefvanschie.inventoryframework:IF:0.10.9'
 }
 
 shadowJar {
     relocate 'co.aikar.commands', 'me.km127pl.elementalarsenal.acf'
     relocate 'co.aikar.locales', 'me.km127pl.elementalarsenal.locales'
+    relocate 'com.github.stefvanschie.inventoryframework', 'me.km127pl.elementalarsenal.inventoryframework'
     // change this to your server's plugin folder
     destinationDirectory.set(file("C:/Users/Jakub/Desktop/test_server/plugins"))
     archiveFileName = "${project.name}-${project.version}-shaded.jar"
