@@ -43,6 +43,11 @@ Otherwise you will have to manually add the [Paper](https://github.com/PaperMC/P
 Once you setup the project, edit `build.gradle` and change the `destinationDirectory` in `shadowJar` to your dev server's plugin
 folder.
 
+### Thanks to
+* stefvanschie for the [InventoryFramework](https://github.com/stefvanschie/IF/wiki/GUI)
+* [Paper](https://papermc.io) for the, well, Paper server software
+* [Bukkit](https://bukkit.org) for actually making Minecraft Server plugins possible
+
 ### License
 
 This project is licensed under the AGPL-3.0 license - see the [LICENSE](LICENSE) file for details

@@ -35,7 +35,7 @@ public class ItemWand extends ItemBase {
 		if (player.getCooldown(this.getMaterial()) > 0) return;
 		// add a cooldown if the player doesn't have one
 		player.setCooldown(this.getMaterial(), (int) (this.getCooldown() * 20));
-		this.shootProjectilePrimary(player);
+		this.shootProjectileSecondary(player);
 		sendActionbar(event.getPlayer(), Component.text("Ability used - ").color(TextColor.color(255, 125, 0))
 				.append(Component.text(this.getAbilities().get(1).getName()).color(TextColor.color(255, 208, 11))).decoration(TextDecoration.ITALIC, false));
 	}
@@ -47,10 +47,7 @@ public class ItemWand extends ItemBase {
 	 * @implNote This method is called when the player right clicks with the item<br>Use this instead of binding to {@link ItemBase#onRightClick(PlayerInteractEvent)}.
 	 * @see ItemBase#onRightClick(PlayerInteractEvent)
 	 */
-	public void shootProjectilePrimary(Player player) {
-	}
-
-	;
+	public void shootProjectilePrimary(Player player) {}
 
 	/**
 	 * Shoots a secondary projectile from the player
@@ -59,8 +56,5 @@ public class ItemWand extends ItemBase {
 	 * @implNote This method is called when the player right clicks with the item<br>Use this instead of binding to {@link ItemBase#onRightClick(PlayerInteractEvent)}.
 	 * @see ItemBase#onRightClick(PlayerInteractEvent)
 	 */
-	public void shootProjectileSecondary(Player player) {
-	}
-
-	;
+	public void shootProjectileSecondary(Player player) {}
 }
